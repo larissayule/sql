@@ -1,0 +1,47 @@
+create table TABELA_DA_VERDADE(
+quem varchar2(200),
+identifica varchar2(15),
+referencia varchar2(50)
+);
+
+Para criar um usuário, é necessário acesssar via Oracle SQL baixado ou VM. Oracle Live apenas para tabelas.
+
+create user NOME
+identified by PASSWORD
+dault tablespace system (onde pode gravar)
+quota unlimited on system (quanto (de armazenamento)o usuário pode usar)
+password expire; (para que o usuário seja obrigado a trocar a senha no primeiro uso)
+
+grant create session, create table to NOME; (para conceder privilégios de acesso).
+Para eliminar usuário, caso o usuário não tenha criado nenhum objeto: drop user NOME.
+Para eliminiar usuário e tudo o que criou: drop user NOME cascade.
+Para selecionar usuário: select username.
+Para mostrar usuário conectado: show user.
+Para bloquear a conta do usuário: alter user NOME account lock;
+
+Para bloquear usuário por erros na tentativa de conexão:
+create profile conexao limit
+failed_login_attempts 3; (3 é o número de vezes antes de bloquear).
+
+Views: visão a uma ou mais tabelas. Por exemplo, ver apenas algumas colunas: 
+create view NOMEDAVIEW
+as select xxxx, yyy
+from
+where;
+Uma vez que a view é criada, pode-se utilizar o select.
+Para elimininar a view: 
+drop view jjj;
+select * from jjjj;
+
+Para alterar o texto da view:
+create or replace view
+as select
+from 
+where
+
+Uma view com with read only abre apenas modo leitura
+
+
+
+
+
