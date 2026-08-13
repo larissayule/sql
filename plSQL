@@ -1,0 +1,23 @@
+Blocos anônimos são blocos sem nomes que podem ser executados a qualquer momento. Procedures são procedimentos nomeados.
+
+cabeçalho is
+declare
+llubinç
+begin
+golbuiçui
+exception
+gbl8çnuºpipok
+end;
+
+Exemplo:
+begin
+dbms_output.put_line('Hello, world!');
+end;
+
+create or replace procedure;
+begin;
+case
+else
+end cas;
+exception
+end;
